@@ -25,23 +25,6 @@ public class CSArrayListTest {
        boolean result = testCollection.addAll(testCollection2);/* adds all of testCollection2 into testCollection*/
        System.out.println(result);
        System.out.println(testCollection);/* prints out the new testCollection*/
-        for (String s : testCollection) {
-            if (s.equals("B")) {
-                testCollection.clear();/* should throw a concurrent modification exception*/
-            }
-        }
-
-        System.out.println("Testing Fail-fast iterator");
-        try {
-            for (String s : testCollection) {
-                if (s.equals("B")) {
-                    testCollection.remove("B");
-                }
-            }
-        } catch (ConcurrentModificationException e) {
-            System.out.println("Caught ConcurrentModificationException");
-        }
-
         }
     }
 

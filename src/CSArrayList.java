@@ -1,4 +1,5 @@
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.AbstractList;
 import java.util.Collection;
@@ -209,18 +210,20 @@ modCount++;
 }
 /* checks if the array list is Empty if it is return true*/
 public boolean isEmpty(){
-    if(size == 0){
+    if(size == 0){// if nothing is in list return true
+        return true;
     }
-    return true;
+    return false;
 }
 /* Removes the object o from the array list*/
 public boolean removes(Object o){
-    int index = indexOf(o);
+    int index = indexOf(o);// calls indexOf(o) method and puts the value in index
     if(index == -1){
-        return true;
+        return false;
     }
+    remove(index);// removes the element at the specified index
     modCount++;
-return false;
+return true;
 }
 /* Makes sure there is enough capacity in the arrayList so everything can fit into the list*/
 public void ensureCapacity(int minCapacity){

@@ -14,7 +14,7 @@ title: CSArrayList<E> — Lab Assignment
 
 ## Getting Started
 
-1. Open the provided `CSArrayList.java` and `CSArrayListTest.java`.
+1. Open the provided `CSArrayList.java` and `src.CSArrayListLabTest.java`.
 2. Create a new project/repo
 3. Run the current driver to verify baseline behavior.
 
